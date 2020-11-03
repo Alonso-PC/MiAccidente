@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<!-- Bootstrap -->
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+
+<title>Reporte Global</title>
+</head>
+<body>
+	<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+  		<span class="navbar-brand mb-0 h1">Reporte Global</span>
+  		<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+   			 <span class="navbar-toggler-icon"></span>
+  		</button>
+  		<div class="collapse navbar-collapse" id="navbarNav">
+    		<ul class="navbar-nav">
+     			<li class="nav-item active">
+    			    <a class="nav-link" href="#" th:href="@{/login?logout}">Salir</a>
+   			   	 </li>   			   		
+    		</ul>    		
+  		</div>
+	</nav>
+	<div class="container">	
+			<br>			
+			<table class="table">
+				<thead>
+					<tr>
+						<th scope="col">ID</th>
+						<th scope="col">Rut</th>
+						<th scope="col">Nombre</th>
+						<th scope="col">Apellido</th>
+						<th scope="col">Empresa</th>
+						<th scope="col">ID Profesional</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr th:each="clientes : ${ReporteGlobal}">
+						<th scope="row" th:text="${clientes.id}"></th>
+						<td th:text="${clientes.rutCliente}"></td>
+						<td th:text="${clientes.nombreCliente}"></td>
+						<td th:text="${clientes.apellidoCliente}"></td>
+						<td th:text="${clientes.empresaCliente}"></td>
+						<td th:text="${clientes.idProfesional}"></td>						
+					</tr>
+				</tbody>
+			</table>
+			<a href="/login/administrador/reportes">
+				<button type="button" class="btn btn-warning">&laquo;Volver</button>
+			</a>
+	</div>
+</body>
+</html>

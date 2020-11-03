@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<!-- Bootstrap -->
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+
+<title>Visualización Actividades</title>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+          <span class="navbar-brand mb-0 h1">Lista Actividades</span>
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav">
+                 <li class="nav-item active">
+                    <a class="nav-link" href="#" th:href="@{/login?logout}">Salir</a>
+                 </li>                          
+            </ul>            
+          </div>
+    </nav>
+    <div class="container">        
+        <div class="panel panel-default">
+            <div class="panel-heading"></div>
+            <table class="table">
+                <thead>
+                    <tr>
+                    	<th scope="col">ID</th>
+                        <th scope="col">Nombre Cliente</th>
+                        <th scope="col">Tipo de Actividad</th>
+                        <th scope="col">Resumen Actividad</th>
+                        <th scope="col">Fecha</th>                        
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr th:each="actividades : ${actividades}">                        
+                        <th scope="row" th:text="${actividades.idActividad}"></th>
+                        <td th:text="${actividades.nombreCliente}"></td>
+                        <td th:text="${actividades.tipoActividad}"></td>
+                        <td th:text="${actividades.resumenActividad}"></td>
+                        <td th:text="${actividades.fechaActividad}"></td>                                
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <a href="/login/administrador/actividades">
+            <button type="button" class="btn btn-warning">&laquo;Volver</button>
+        </a>        
+    </div>
+
+</body>
+</html>

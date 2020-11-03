@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+
+    <title>Actividad de Terreno</title>
+</head>
+<body>
+	<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+  		<span class="navbar-brand mb-0 h1">Portal Profesionales</span>
+  		<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+   			 <span class="navbar-toggler-icon"></span>
+  		</button>
+  		<div class="collapse navbar-collapse" id="navbarNav">
+    		<ul class="navbar-nav">
+     			<li class="nav-item active">
+    			    <a class="nav-link" href="#" th:href="@{/login?logout}">Salir</a>
+   			   	</li>   			   		
+    		</ul>    		
+  		</div>
+	</nav>
+	<br>
+	<div class="col-7">
+    <h3>Auditoria en Terreno</h3>
+    <hr class="bg-warning col-11 row">
+    <form>
+    	<br>
+        <b><p>De click al recuadro si la empresa cumple con lo siguiente:</p></b>
+        <br>
+        <div class="custom-control custom-checkbox">
+  			<input type="checkbox" class="custom-control-input" id="customCheck1">
+  			<label class="custom-control-label" for="customCheck1">Se realiza la charla diaria de 5min</label>
+		</div>
+        <div class="custom-control custom-checkbox">
+            <input type="checkbox" class="custom-control-input" id="customCheck2">
+            <label class="custom-control-label" for="customCheck2">Informa a los trabajadores acerca de los riesgos laborales</label>
+        </div>
+        <div class="custom-control custom-checkbox">
+            <input type="checkbox" class="custom-control-input" id="customCheck3">
+            <label class="custom-control-label" for="customCheck3">El personal cumple con el uso correcto de los EPP</label>
+        </div>
+        <div class="custom-control custom-checkbox">
+            <input type="checkbox" class="custom-control-input" id="customCheck4">
+            <label class="custom-control-label" for="customCheck4">Cuenta con servicios higiénicos, de uso individual y/o colectivo</label>
+        </div>
+        <div class="custom-control custom-checkbox">
+            <input type="checkbox" class="custom-control-input" id="customCheck5">
+            <label class="custom-control-label" for="customCheck5">Mantiene los servicios higiénicos en buen estado de limpieza y/o
+                funcionamiento</label>
+        </div>
+        <div class="custom-control custom-checkbox">
+            <input type="checkbox" class="custom-control-input" id="customCheck6">
+            <label class="custom-control-label" for="customCheck6">Tiene habilitado un recinto destinado a vestuario, (si los trabajadores
+                necesitan cambiarse)</label>
+        </div>
+        <div class="custom-control custom-checkbox">
+            <input type="checkbox" class="custom-control-input" id="customCheck7">
+            <label class="custom-control-label" for="customCheck7">Hay comedor para los trabajadores que se vean precisados a
+                consumir alimentos en el lugar</label>
+        </div>
+        <div class="custom-control custom-checkbox">
+            <input type="checkbox" class="custom-control-input" id="customCheck8">
+            <label class="custom-control-label" for="customCheck8">Cuenta con señalización visible
+                y permanente, indicando vias de escape y zonas de seguridad</label>
+        </div>
+        <div class="custom-control custom-checkbox">
+            <input type="checkbox" class="custom-control-input" id="customCheck9">
+            <label class="custom-control-label" for="customCheck9">Mantiene protegidos los circuitos y equipos eléctricos mediante
+                protector diferencial
+            </label>
+        </div>
+        <div class="custom-control custom-checkbox">
+            <input type="checkbox" class="custom-control-input" id="customCheck10">
+            <label class="custom-control-label" for="customCheck10">Mantiene extintores de incendio adecuados al riesgo a cubrir
+            </label>
+        </div>
+        <div class="custom-control custom-checkbox">
+            <input type="checkbox" class="custom-control-input" id="customCheck11">
+            <label class="custom-control-label" for="customCheck11">Se cuenta con vías de escape
+            </label>
+        </div>
+        <br>
+    		<button type="submit" class="btn btn-primary">Ingresar</button>
+    	<br>
+    </form>
+    <br>
+    <div th:if="${ingresoacc!=null}" class="alert alert-info" role="alert">Auditoria Ingresada</div>
+    <a href="/login/profesionales/asesoria">
+        <button type="submit" class="btn btn-warning">&laquo;Volver</button>
+    </a>
+    </div>
+</body>
+
+</html>

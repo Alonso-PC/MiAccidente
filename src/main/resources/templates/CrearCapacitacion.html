@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<!-- Bootstrap -->
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+
+	<title>Crear Capacitación</title>
+</head>
+<body>
+	<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+  		<span class="navbar-brand mb-0 h1">Portal Profesionales</span>
+  		<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+   			 <span class="navbar-toggler-icon"></span>
+  		</button>
+  		<div class="collapse navbar-collapse" id="navbarNav">
+    		<ul class="navbar-nav">
+     			<li class="nav-item active">
+    			    <a class="nav-link" href="#" th:href="@{/login?logout}">Salir</a>
+   			   	</li>   			   		
+    		</ul>    		
+  		</div>
+	</nav>
+	<br>
+	<div class="col-6">
+		<h3>Datos Capacitación</h3>
+		<hr class="bg-warning col-6 row">
+		<form  action="#" th:action="@{/login/profesionales/asesoria/crear}" method="post">	
+			<div class="form-group">
+    			<label>ID Cliente</label>
+    			<input type="text" class="form-control col-6">
+  			</div> 	
+  			<div class="form-group">  
+				<label>Tipos de Capacitación</label> 		  		
+    			<select class="form-control col-6">
+      				<option>--Tipos de Capacitación--</option>
+      				<option>Actitudes Preventivas</option>
+                    <option>Prevención y Manejo de Conflictos</option>
+                    <option>Psicología de la Emergencia</option>
+                    <option>El Valor de la Prevención</option>
+                    <option>Manejo de Emociones</option>
+                    <option>Creacion de Comite Paritario</option>
+    			</select>
+  			</div>
+  			<div class="form-group">
+    			<label>ID Profesional</label>
+    			<input type="text" class="form-control col-6">
+  			</div>    				
+  			<div class="form-group">
+    			<label>Fecha del Accidente</label>
+    			<input type="date" class="form-control col-6">
+  			</div> 
+  			<div class="form-group">
+    			<label>Cantidad Participantes</label>
+    			<input type="text" class="form-control col-6">
+  			</div> 	
+  			<button type="submit" class="btn btn-primary">Crear</button>
+  			<br><br> 		
+		</form>	
+		<a href="/login/profesionales/asesoria">
+  			<button type="submit" class="btn btn-warning">&laquo;Volver</button>
+  		</a>
+  	</div>
+</body>
+</html>

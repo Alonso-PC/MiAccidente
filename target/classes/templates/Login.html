@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<!-- Bootstrap -->
+<link rel="stylesheet"
+	href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+<link href="#" th:href="@{/css/login.css}" rel="stylesheet" />
+<link href="#" th:href="@{/css/estilo.css}" rel="stylesheet" />
+
+<title>Login</title>
+</head>
+<body>
+	<div class="row justify-content-center col-14">
+		<form action="#" th:action="@{check}" th:object="${credenciales}"
+			method="post">
+			<br>
+			<div class="form-group text-center">
+				<b><h1 class="titulo">Bienvenido a Mi Accidente</h1></b>
+			</div>
+			<br>
+			<div class="form-group text-center">
+				<b><h3 class="subtitulo">Entra a tu cuenta</h3></b>
+			</div>
+			<br> <br> <br>
+			<div class="form-group">
+				<input type="text" class="form-control col-12" placeholder="Usuario"
+					th:field="*{nombre}" />
+			</div>
+			<br>
+			<div class="form-group">
+				<input type="password" class="form-control col-12"
+					placeholder="Contraseña" th:field="*{pass}" />
+			</div>
+			<br> <br>
+			<div th:if="${error!=null}" class="alert alert-danger col-12"
+				role="alert">Credenciales Incorrectas</div>
+			<div th:if="${logout!=null}" class="alert alert-info col-12"
+				role="alert">Logout con éxito!</div>
+			<button class="btn btn-lg btn-primary btn-block col-12" type="submit">Entrar</button>
+		</form>
+	</div>
+	<footer th:fragment="footer" class="text-center mb-2 fixed-bottom">
+		<b>&copy;2020 "Los CSS" Todos los derechos reservados</b>
+	</footer>
+</body>
+</html>

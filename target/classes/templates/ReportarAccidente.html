@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<!-- Bootstrap -->
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+
+	<title>Reportar Accidente</title>
+</head>
+<body>
+	<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+  		<span class="navbar-brand mb-0 h1">Portal Clientes</span>
+  		<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+   			 <span class="navbar-toggler-icon"></span>
+  		</button>
+  		<div class="collapse navbar-collapse" id="navbarNav">
+    		<ul class="navbar-nav">
+     			<li class="nav-item active">
+    			    <a class="nav-link" href="#" th:href="@{/login?logout}">Salir</a>
+   			   	 </li>   			   		
+    		</ul>    		
+  		</div>
+	</nav>
+	<br>
+	<div class="col-6">
+		<h3>Reporte de Accidente</h3>
+		<hr class="bg-warning col-6 row">
+		<form  action="#" th:action="@{btnacc}" method="post">		
+  			<div class="form-group">    		  		
+    			<select class="form-control col-6">
+      				<option>--Tipos de Accidentes--</option>
+      				<option>Resbalones y Tropezones</option>
+                	<option>Caídas del mismo o diferente nivel</option>
+                	<option>Ser golpeado por objetos que caen</option>
+                	<option>Desgaste por movimientos repetitivos</option>
+                	<option>Choques y colisiones</option>
+                	<option>Cortes y laceraciones</option>
+                	<option>Inhalar vapores tóxicos</option>
+                	<option>La exposición al ruido fuerte</option>
+                	<option>Contacto con la instalación eléctrica</option>
+                	<option>Estrés y ansiedad</option>
+                	<option>Sobresfuerzos y lesiones musculares</option>
+                	<option>Atrapamientos</option>
+                	<option>Accidentes biológicos</option>
+                	<option>Intoxicaciones alimentarias</option>
+                	<option>Otros accidentes laborales</option>
+    			</select>
+  			</div>
+  			<div class="form-group">
+    			<label>Área de la Empresa</label>
+    			<input type="text" class="form-control col-6">
+  			</div>  	
+  			<div class="form-group">
+    			<label>Nombre del Trabajador</label>
+    			<input type="text" class="form-control col-6">
+  			</div>	
+  			<div class="form-group">
+    			<label>Fecha del Accidente</label>
+    			<input type="date" class="form-control col-6">
+  			</div>  		
+  			<button type="submit" class="btn btn-primary">Reportar</button>
+  			<br><br>
+  			<div th:if="${ingresoacc!=null}" class="alert alert-info" role="alert">Accidente Notificado</div>  		  		
+			<br>
+		</form>	
+		<a href="/login/clientes">
+  			<button type="submit" class="btn btn-warning">&laquo;Volver</button>
+  		</a>
+  	</div>
+</body>
+</html>

@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<!-- Bootstrap -->
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+
+	<title>Ingresar Asesoría</title>
+</head>
+<body>
+	<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+  		<span class="navbar-brand mb-0 h1">Portal Profesionales</span>
+  		<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+   			 <span class="navbar-toggler-icon"></span>
+  		</button>
+  		<div class="collapse navbar-collapse" id="navbarNav">
+    		<ul class="navbar-nav">
+     			<li class="nav-item active">
+    			    <a class="nav-link" href="#" th:href="@{/login?logout}">Salir</a>
+   			   	</li>   			   		
+    		</ul>    		
+  		</div>
+	</nav>
+	<br>
+	<div class="col-6">
+		<h3>Asesoría Personalizada</h3>
+		<hr class="bg-warning col-6 row">
+		<form  action="#" th:action="@{/login/profesionales/asesoria/ingresar}" th:object="${IngresarAsesoria}" method="post">	
+			<div class="form-group">
+    			<label>ID Cliente</label>
+    			<input type="text" class="form-control col-6">
+  			</div> 	
+  			<div class="form-group">  
+				<label>Tipos de Asesoría</label> 		  		
+    			<select class="form-control col-6">
+      				<option>--Tipos de Asesoría--</option>
+      				<option>Accidentes con Resultado de Muerte</option>
+                    <option>Accidentes con Amputaciones Traumáticas</option>
+                    <option>Accidentes Graves no Amputados</option>
+                    <option>Casos en que la DT curse infracciones en H&S</option>
+                    <option>Otras fiscalizaciones</option>
+    			</select>
+  			</div>
+  			<div class="form-group">
+    			<label>ID Profesional</label>
+    			<input type="text" class="form-control col-6">
+  			</div>    				
+  			<div class="form-group">
+    			<label>Fecha del Accidente</label>
+    			<input type="date" class="form-control col-6">
+  			</div> 
+  			<div class="form-group">
+    			<label>Descripción del Accidente</label>
+    			<textarea class="form-control col-6" rows="3"></textarea>
+  			</div>	
+  			<button type="submit" class="btn btn-primary">Ingresar</button>
+  			<br><br> 		
+		</form>	
+		<a href="/login/profesionales/asesoria">
+  			<button type="submit" class="btn btn-warning">&laquo;Volver</button>
+  		</a>
+  	</div>
+</body>
+</html>

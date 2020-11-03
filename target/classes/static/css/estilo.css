@@ -1,0 +1,36 @@
+@charset "ISO-8859-1";
+
+@font-face {
+    font-family: "Satisfy";
+    src: url(Satisfy/Satisfy-Regular.ttf)
+}
+
+body {
+    background: rgb(204, 230, 255);
+    background-image: url(https://www.suseso.cl/606/articles-19072_imagen_portada.thumb_iSlider.jpg);
+    background-size: cover;
+}
+
+.titulo {
+	font-family: Satisfy;
+	color: white;
+}
+
+.subtitulo{
+	color: white;
+}
+
+.adm{
+	background-image: url(https://www.eherreraya.com.mx/wp-content/uploads/2020/04/oficina.jpg);
+	background-size: cover;
+}
+
+.prof{
+	background-image: url(https://directivosygerentes.es/wp-content/uploads/2017/01/empresas-sociedad-conectada.1-681x480.jpg);
+	background-size: cover;
+}
+
+.cte{
+	background-image: url(https://cesams.com/wp-content/uploads/2018/10/liderazgo_gestion_1.png);
+	background-size: cover;
+}

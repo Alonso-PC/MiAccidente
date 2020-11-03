@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<!-- Bootstrap -->
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+	<link href="#" th:href="@{/css/estilo.css}" rel="stylesheet" />
+
+<title>Vista Actividades</title>
+</head>
+<body class="cte">
+	<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+  		<span class="navbar-brand mb-0 h1">Portal Administrador</span>
+  		<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+   			 <span class="navbar-toggler-icon"></span>
+  		</button>
+  		<div class="collapse navbar-collapse" id="navbarNav">
+    		<ul class="navbar-nav">
+     			<li class="nav-item active">
+    			    <a class="nav-link" href="#" th:href="@{/login?logout}">Salir</a>
+   			   	 </li>   			   		
+    		</ul>    		
+  		</div>
+	</nav>
+
+	<ul class="list-group">
+		<li class="list-group-item">
+			<a href="/login/administrador/listaractividades">
+				<button type="button" class="btn btn-success">Visualizar Actividades</button>
+			</a>
+		</li>
+		<li class="list-group-item">
+			<a href="/login/administrador/notificaratrasos">
+				<button type="button" class="btn btn-success">Notificar Atrasos</button>
+			</a>
+		</li>
+		<li class="list-group-item">
+			<a href="/login/administrador">
+				<button type="button" class="btn btn-warning">&laquo;Volver</button>
+			</a>
+		</li>		
+	</ul>
+</body>
+</html>
